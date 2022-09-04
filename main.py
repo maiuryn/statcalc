@@ -1,11 +1,15 @@
 
 def main():
-    a = [1, 2, 3, 4]
-    print("Sum: " + sum(a))
-    print("Mean: " + mean(a))
-    print("Variance: " + variance(a))
-    print("Standard Deviation: " + stdDev(a))
-    print("Median: " + median(a))
+    a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    
+    print("Sum: " + str(sum(a)))
+    print("Mean: " + str(mean(a)))
+    print("Variance: " + str(variance(a)))
+    print("Standard Deviation: " + str(stdDev(a)))
+    print("Median: " + str(median(a)))
+
+    a.sort()
+    print(a)
 
 #Sum of the array arr
 def sum(arr):
@@ -37,5 +41,15 @@ def median(arr):
         return (arr[len(arr) // 2] + arr[len(arr) // 2 - 1]) / 2
     else:
         return arr[len(arr) / 2]
+
+#Organize data into 2D array histogram
+#def histogram(arr, step):  
+#    arr.sort()
+#    result = []
+#   for i in range(max(arr) // step + 1):
+#        current = []
+#        for x in range(len(arr)):
+#           current.append(arr[x])
+#    return result
 
 main()
